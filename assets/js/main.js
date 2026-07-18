@@ -94,19 +94,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* ==========================
+/* ===========================
 AI DESIGN
-========================== */
+=========================== */
 
-const generateBtn = document.getElementById("generateBtn");
+const btn=document.getElementById("generateBtn");
 
-if(generateBtn){
+if(btn){
 
-generateBtn.addEventListener("click",()=>{
+btn.addEventListener("click",()=>{
 
-const text=document.getElementById("dreamHome").value.trim();
+const input=document.getElementById("dreamHome");
 
-if(text===""){
+const value=input.value.trim();
+
+if(value===""){
 
 alert("Please describe your dream home.");
 
@@ -114,9 +116,33 @@ return;
 
 }
 
-alert(
-"Thank you!\n\nYour concept request has been received.\n\nM1 DESIGN will contact you soon."
-);
+const chat=document.querySelector(".chat-window");
+
+chat.innerHTML+=`
+
+<div class="message user" style="margin-top:25px;
+margin-left:auto;
+background:#C9A227;
+color:#111;
+display:block;">
+
+${value}
+
+</div>
+
+<div class="message ai" style="margin-top:25px;display:block;">
+
+✨ Excellent choice!
+
+Our architects will review your request and prepare a premium architectural concept based on your description.
+
+</div>
+
+`;
+
+input.value="";
+
+chat.scrollTop=chat.scrollHeight;
 
 });
 
