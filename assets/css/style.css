@@ -278,3 +278,76 @@ footer{
 .hero-content{
     will-change:transform,opacity;
 }
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+    background:#111;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+}
+
+.section-tag{
+    color:#C9A227;
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.about h2{
+    font-size:48px;
+    margin:20px 0;
+}
+
+.about p{
+    margin-bottom:20px;
+    color:#c8c8c8;
+}
+
+.about-stats{
+    display:flex;
+    gap:60px;
+    margin-top:40px;
+}
+
+.about-stats h3{
+    font-size:42px;
+    color:#C9A227;
+}
+
+.about-stats span{
+    color:#aaa;
+}
+
+@media(max-width:992px){
+
+.about-grid{
+    grid-template-columns:1fr;
+}
+
+.about-image{
+    order:1;
+}
+
+.about-content{
+    order:2;
+}
+
+.about-stats{
+    justify-content:space-between;
+}
+
+}
