@@ -266,3 +266,15 @@ footer{
 }
 
 }
+
+.header{
+    transition:all .35s ease;
+}
+
+.navigation a.active{
+    color:#C9A227;
+}
+
+.hero-content{
+    will-change:transform,opacity;
+}
