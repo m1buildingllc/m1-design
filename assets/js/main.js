@@ -93,3 +93,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* ==========================
+AI DESIGN
+========================== */
+
+const generateBtn = document.getElementById("generateBtn");
+
+if(generateBtn){
+
+generateBtn.addEventListener("click",()=>{
+
+const text=document.getElementById("dreamHome").value.trim();
+
+if(text===""){
+
+alert("Please describe your dream home.");
+
+return;
+
+}
+
+alert(
+"Thank you!\n\nYour concept request has been received.\n\nM1 DESIGN will contact you soon."
+);
+
+});
+
+}
